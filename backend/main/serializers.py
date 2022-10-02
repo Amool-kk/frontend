@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from drf_extra_fields.fields import Base64ImageField
 
-from .models import People
+from .models import People, PeopleFound
 
 class PeopleSerializer(serializers.ModelSerializer):
     image=Base64ImageField() # From DRF Extra Fields
@@ -25,3 +25,9 @@ class PeopleSerializer(serializers.ModelSerializer):
         complexion=validated_data.pop('complexion')
         hair_color=validated_data.pop('hair_color')
         return People.objects.create(name=name,image=image,aadhar_no=aadhar_no,age=age,gender=gender,contact=contact,address=address,clothes_color=clothes_color,height=height,weight=weight,height_characterstics=height_characterstics,body_characterstics=body_characterstics,complexion=complexion,hair_color=hair_color)
+
+class PeopleFoundSerializer(serializers.ModelSerializer):
+    image=Base64ImageField() # From DRF Extra Fields
+    class Meta:
+        model = PeopleFound
+        fields = ['reporter_name', 'contact', 'name', 'image', 'missing_name', 'clothes_color', 'aadhar_no', 'gender', 'height_characterstics', 'body_characterstics', 'complexion', 'hair_characterstics']
