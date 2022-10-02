@@ -3,6 +3,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import Dashboard from './pages/dashboard/Dashboard';
 import { useEffect } from 'react';
 import Mreport from './pages/mreport/Mreport';
+import FOUND from './pages/found/Found';
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (window.location.pathname === 'http://localhost:3000/') {
+    console.log(window.location.pathname)
+    if (window.location.pathname === '/') {
       navigate('/admin/dashboard')
     }
   }, [])
@@ -20,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/admin/dashboard" element={<Dashboard />} />
         <Route path="/admin/missing_report" element={<Mreport />} />
+        <Route path="/admin/found" element={<FOUND />} />
       </Routes>
     </div>
   );

@@ -1,15 +1,14 @@
 import React from 'react'
 import { Sidemenu } from '../../components/menu/Sidemenu';
-import './main.css'
 
-const Mreport = () => {
+const FOUND = () => {
     return (
         <>
             <div className="container">
-                <Sidemenu id={2} />
+                <Sidemenu id={3} />
                 <div className="right-cont">
                     <div className="nav">
-                        <h1>Missing Report</h1>
+                        <h1>Found Report</h1>
                     </div>
                     <hr />
                     <div className="mainSection">
@@ -18,7 +17,7 @@ const Mreport = () => {
                                 <form>
                                     <div className="card-items">
                                         <div className="items">
-                                            <h3>Missing Person Report</h3>
+                                            <h3>Found Person Report</h3>
                                         </div>
                                         <div className="items" style={{ color: "#999", marginTop: "20px", paddingLeft: "50px" }}>
                                             <tr >
@@ -27,22 +26,30 @@ const Mreport = () => {
                                             </tr>
                                         </div>
                                         <div className="items">
-                                            <li>
-                                                <label htmlFor="aadharno">AADHAR NO.</label>
-                                                <input type="text" name="aadharno" />
-                                            </li>
+
                                             <li>
                                                 <label htmlFor="fullname">
-                                                    FULL NAME
+                                                    REPORTER NAME
                                                 </label>
                                                 <input type="text" name="fullname" placeholder='Full Name' />
                                             </li>
                                             <li>
-                                                <label htmlFor="age">
-                                                    AGE
+                                                <label htmlFor="contact">
+                                                    CONTACT
                                                 </label>
-                                                <input type="text" name="age" placeholder='AGE' />
+                                                <input type="text" name='contact' placeholder='xxxxxxxxxx' />
                                             </li>
+                                        </div>
+                                        {/* <div className="items">
+                                            <li style={{ display: "unset", textAlign: "left", width: "92%" }}>
+                                                <label htmlFor="address">ADDRESS</label>
+                                                <input type="text" name='address' placeholder='Address' />
+                                            </li>
+                                        </div> */}
+                                    </div>
+                                    <div className="card-items">
+                                        <div className="items">
+                                            <h3>Physical Appearance</h3>
                                         </div>
                                         <div className="items">
                                             <li>
@@ -55,39 +62,14 @@ const Mreport = () => {
                                                 </div>
                                             </li>
                                             <li>
-                                                <label htmlFor="contact">
-                                                    CONTACT
+                                                <label htmlFor="fullname">
+                                                    MISSING PERSON NAME
                                                 </label>
-                                                <input type="text" name='contact' placeholder='xxxxxxxxxx' />
+                                                <input type="text" name="fullname" placeholder='Full Name' />
                                             </li>
-                                        </div>
-                                        <div className="items">
-                                            <li style={{ display: "unset", textAlign: "left", width: "92%" }}>
-                                                <label htmlFor="address">ADDRESS</label>
-                                                <input type="text" name='address' placeholder='Address' />
-                                            </li>
-                                        </div>
-                                    </div>
-                                    <div className="card-items">
-                                        <div className="items">
-                                            <h3>Physical Appearance</h3>
-                                        </div>
-                                        <div className="items">
                                             <li>
                                                 <label htmlFor="color">COLOR OF CLOTHES</label>
                                                 <input type="text" name="color" placeholder='Color' />
-                                            </li>
-                                            <li>
-                                                <label htmlFor="height">
-                                                    HEIGHT
-                                                </label>
-                                                <input type="text" name="height" placeholder='Height' />
-                                            </li>
-                                            <li>
-                                                <label htmlFor="weight">
-                                                    WEIGHT
-                                                </label>
-                                                <input type="text" name="weight" placeholder='Weight' />
                                             </li>
                                         </div>
                                     </div>
@@ -178,4 +160,4 @@ const Mreport = () => {
     )
 }
 
-export default Mreport;
+export default FOUND;

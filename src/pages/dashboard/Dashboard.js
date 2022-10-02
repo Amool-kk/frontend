@@ -28,18 +28,34 @@ const dataSource2 = {
 const categories = [
     {
         "category": [
-            { "label": "Q1" },
-            { "label": "Q2" },
-            { "label": "Q3" },
-            { "label": "Q4" }
+            { "label": "Jan" },
+            { "label": "Feb" },
+            { "label": "Mar" },
+            { "label": "Apr" },
+            { "label": "May" },
+            { "label": "Jun" },
+            { "label": "Jul" },
+            { "label": "Aug" },
+            { "label": "Sep" },
+            { "label": "Oct" },
+            { "label": "Nov" },
+            { "label": "Dec" }
         ]
     }
 ]
 // STEP 3- Construct the dataset comprising multiple series
 const dataset = [
     {
-        "seriesname": "Previous Year",
+        "seriesname": "Number of People Found",
         "data": [
+            { "value": "12000" },
+            { "value": "10500" },
+            { "value": "23500" },
+            { "value": "16000" },
+            { "value": "12000" },
+            { "value": "10500" },
+            { "value": "23500" },
+            { "value": "16000" },
             { "value": "12000" },
             { "value": "10500" },
             { "value": "23500" },
@@ -47,8 +63,16 @@ const dataset = [
         ]
     },
     {
-        "seriesname": "Current Year",
+        "seriesname": "Number of People Missing",
         "data": [
+            { "value": "24400" },
+            { "value": "29800" },
+            { "value": "20800" },
+            { "value": "26800" },
+            { "value": "24400" },
+            { "value": "29800" },
+            { "value": "20800" },
+            { "value": "26800" },
             { "value": "24400" },
             { "value": "29800" },
             { "value": "20800" },
@@ -59,15 +83,16 @@ const dataset = [
 
 const chartConfigs = {
     type: 'mscolumn2d',
-    width: 700,
+    width: 850,
     height: 400,
     dataFormat: 'json',
     dataSource: {
         "chart": {
             "theme": "fusion",
-            "caption": "Comparison of Quarterly Revenue",
-            "xAxisname": "Quarter",
-            "yAxisName": "Revenues (In USD)",
+            "caption": "Monthly Missing/Found Report",
+            "subCaption":"List of Number of Missing/Found People",
+            "xAxisname": "Months",
+            "yAxisName": "Number of People",
             "numberPrefix": "$",
             "plotFillAlpha": "80",
             "divLineIsDashed": "1",

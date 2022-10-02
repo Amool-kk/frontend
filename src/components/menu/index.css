@@ -8,6 +8,7 @@
     height: 95.5vh;
     font-family: 'Courier New', Courier, monospace;
     display: flex;
+
 }
 
 .container .left-cont {
@@ -20,6 +21,7 @@
     background-size: cover;
     color: white;
     flex: 0 0 auto;
+    position: static;
 }
 
 .container .shadow {

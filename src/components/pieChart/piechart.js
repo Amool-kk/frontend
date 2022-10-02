@@ -7,7 +7,7 @@ charts(FusionCharts);
 
 const dataSource = {
     chart: {
-        caption: "Market Share of Web Servers",
+        caption: "Total Missing/Found Report",
         plottooltext: "<b>$percentValue</b> of web servers run on $label servers",
         showlegend: "1",
         showpercentvalues: "1",
@@ -17,20 +17,12 @@ const dataSource = {
     },
     data: [
         {
-            label: "Apache",
-            value: "32647479"
+            label: "Number of Found People",
+            value: "40%"
         },
         {
-            label: "Microsoft",
-            value: "22100932"
-        },
-        {
-            label: "Zeus",
-            value: "14376"
-        },
-        {
-            label: "Other",
-            value: "18674221"
+            label: "Number of Missing People",
+            value: "60"
         }
     ]
 };
@@ -40,7 +32,7 @@ const Piechart = () => {
         <ReactFusioncharts
             type="pie2d"
             width="30%"
-            height="48%"
+            height="43%"
             dataFormat="JSON"
             dataSource={dataSource}
         />
