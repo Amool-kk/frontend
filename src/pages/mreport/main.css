@@ -1,0 +1,53 @@
+*,
+*:focus{outline: none}
+
+
+.cards .items {
+    display: flex;
+}
+
+.cards .items tr {
+    margin: 20px auto;
+    position: relative;
+}
+
+.cards .items tr label {
+    position: absolute;
+    cursor: text;
+    z-index: 2;
+    top: 13px;
+    left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    background: #fff;
+    padding: 0 10px;
+    color: #999;
+    transition: all .3s ease
+}
+
+.cards .items tr input {
+    display: block;
+    width: 400px;
+    height: 40px;
+    background: transparent;
+    border: solid 1px #ccc;
+    transition: all .3s ease;
+    padding: 0 15px
+}
+
+.cards .items tr input:focus {
+    border-color: blue
+}
+
+.cards .items tr input:focus + label,
+.cards .items tr input:valid + label{
+  font-size: 11px;
+  top: -5px
+}
+.cards .items tr input:focus + label{
+  color: blue
+}
+
+.cards form {
+    width: 100%;
+}

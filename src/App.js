@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import { Routes, Route, useNavigate } from 'react-router-dom'
+import Dashboard from './pages/dashboard/Dashboard';
+import { useEffect } from 'react';
+import Mreport from './pages/mreport/Mreport';
+
 
 function App() {
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (window.location.pathname === 'http://localhost:3000/') {
+      navigate('/admin/dashboard')
+    }
+  }, [])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/admin/dashboard" element={<Dashboard />} />
+        <Route path="/admin/missing_report" element={<Mreport />} />
+      </Routes>
     </div>
   );
 }
