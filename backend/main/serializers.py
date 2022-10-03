@@ -30,4 +30,4 @@ class PeopleFoundSerializer(serializers.ModelSerializer):
     image=Base64ImageField() # From DRF Extra Fields
     class Meta:
         model = PeopleFound
-        fields = ['reporter_name', 'contact', 'name', 'image', 'missing_name', 'clothes_color', 'aadhar_no', 'gender', 'height_characterstics', 'body_characterstics', 'complexion', 'hair_characterstics']
+        fields = ['reporter_name', 'contact', 'image', 'missing_name', 'clothes_color', 'aadhar_no', 'gender', 'height_characterstics', 'body_characterstics', 'complexion', 'hair_characterstics']

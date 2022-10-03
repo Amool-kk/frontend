@@ -9,21 +9,6 @@ import Piechart from "../../components/pieChart/piechart";
 
 ReactFC.fcRoot(FusionCharts, Column2D, FusionTheme);
 
-const dataSource2 = {
-    chart: {
-        caption: "Market Share of Web Servers",
-        plottooltext: "<b>$percentValue</b> of web servers run on $label servers",
-        showlegend: "1",
-        showpercentvalues: "1",
-        legendposition: "bottom",
-        usedataplotcolorforlabels: "1",
-        theme: "fusion"
-    },
-    data: [
-        {}
-    ]
-};
-
 
 const categories = [
     {

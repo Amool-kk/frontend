@@ -25,7 +25,7 @@ class People(models.Model):
 class PeopleFound(models.Model):
     reporter_name = models.CharField(max_length=100)
     contact = models.CharField(max_length=50)
-    name = models.CharField(max_length=100)
+    # name = models.CharField(max_length=100)
     image = models.ImageField(upload_to='images/')
     missing_name = models.CharField(max_length=100)
     clothes_color = models.CharField(max_length=100)
